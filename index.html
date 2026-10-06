@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galeria Contemporarte: obras de Pablo Menezes, percurso artístico e contato para aquisição." />
+    <title>Galeria Contemporarte | Pablo Menezes</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23151411'/%3E%3Crect x='18' y='14' width='28' height='36' fill='none' stroke='%23f4efe6' stroke-width='4'/%3E%3Cpath d='M24 42 31 30l5 8 4-6 4 10z' fill='%236f2134'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-scrolled="false">
+      <a class="brand" href="#inicio" aria-label="Galeria Contemporarte">
+        <span class="brand-mark">C</span>
+        <span>
+          <strong>Galeria Contemporarte</strong>
+          <small>Rio de Janeiro</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <nav id="main-menu" class="main-menu" aria-label="Navegação principal">
+        <a href="#obras">Arte</a>
+        <a href="#exposicoes">Exposições</a>
+        <a href="#pablo">Pablo Menezes</a>
+        <a href="#percurso">Percurso</a>
+        <a href="#espaco-virtual">Espaço virtual</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Alternar tema">Claro/Escuro</button>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-art-frame">
+            <img id="hero-image" src="assets/img/pablo/12.1.png" alt="" />
+          </div>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Arte contemporânea · obras disponíveis · contato direto</p>
+          <h1>Galeria digital para ver, desejar e adquirir arte.</h1>
+          <p>
+            A Contemporarte apresenta obras, séries, registros de exposição e o percurso artístico de Pablo Menezes em uma experiência de visita pensada para aproximar obra, artista e colecionador.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#obras">Ver obras</a>
+            <a class="btn ghost" target="_blank" rel="noreferrer" href="https://wa.me/5522997414490?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Galeria%20Contemporarte%20e%20quero%20conhecer%20as%20obras.">Falar sobre aquisição</a>
+          </div>
+          <aside class="hero-caption">
+            <span>Pablo Menezes</span>
+            <strong>Obras, séries e registros</strong>
+          </aside>
+        </div>
+      </section>
+
+      <section class="intro section-pad">
+        <div class="intro-grid">
+          <div>
+            <p class="eyebrow">Conceito</p>
+            <h2>Um percurso entre matéria, corpo, imagem e espaço.</h2>
+          </div>
+          <p>
+            Esta versão local reúne obras e registros extraídos do material já disponível: cerâmicas, objetos, fotoarte, desenhos, pinturas, obras para jardim e registros da exposição Genoma. As fichas técnicas podem ser refinadas depois com dimensões, datas e disponibilidade.
+          </p>
+        </div>
+      </section>
+
+      <section id="obras" class="works section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">Acervo</p>
+          <h2>Obras e registros</h2>
+          <p>Clique em uma obra para ampliar. Use os filtros para navegar por série, tipo de obra e período.</p>
+        </div>
+        <div class="filters-panel" aria-label="Filtrar acervo">
+          <div class="filter-field">
+            <label for="series-filter">Acervo ou séries</label>
+            <select id="series-filter">
+              <option value="todas">Todas as séries</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="type-filter">Tipo de arte</label>
+            <select id="type-filter">
+              <option value="todas">Todos os tipos</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="period-filter">Período</label>
+            <select id="period-filter">
+              <option value="todas">Todos os períodos</option>
+              <option value="2020">2020 em diante</option>
+              <option value="2015">2015 a 2019</option>
+              <option value="antes-2015">Antes de 2015</option>
+              <option value="sem-data">Data a confirmar</option>
+            </select>
+          </div>
+          <button id="clear-filters" class="filter-clear" type="button">Limpar filtros</button>
+        </div>
+        <div id="works-grid" class="works-grid" aria-live="polite"></div>
+        <div class="load-more-wrap">
+          <button id="load-more" class="btn ghost dark" type="button">Ver mais obras</button>
+        </div>
+      </section>
+
+      <section id="exposicoes" class="exhibitions section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">Exposições</p>
+          <h2>Exposição Genoma dos Correios</h2>
+          <p>Área reservada para os registros corretos da exposição Genoma no Centro Cultural dos Correios e da fachada da rua Ipiranga 31, em Laranjeiras.</p>
+        </div>
+        <div id="exhibition-grid" class="exhibition-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="pablo" class="artist section-pad">
+        <div class="artist-card">
+          <div class="artist-copy">
+            <p class="eyebrow">Artista</p>
+            <h2>Pablo Menezes</h2>
+            <p class="artist-meta">1979 · Aracaju/SE · vive e trabalha no Rio de Janeiro desde 1998</p>
+            <p>
+              A obra de Pablo Menezes investiga como o poder atravessa a subjetividade, infiltrando-se nos gestos cotidianos, nas relações sociais e nas estruturas aparentemente neutras da vida comum. Sua produção transita entre pintura, objeto, escultura, desenho, fotoarte, matéria orgânica, resina, cerâmica e intervenções ligadas ao espaço expositivo e urbano.
+            </p>
+            <p>
+              Ainda jovem, destacou-se no circuito cultural de Sergipe com painéis públicos, performances e exposições-instalação, entre elas "O Plágio... O Novo...", "Vastas Entranhas" e obras de grande escala como "Agreste Alegre" e "Veredas Juninas". No Rio, pesquisou pintura no Centro de Artes Calouste Gulbenkian e na Escola de Artes Visuais do Parque Lage.
+            </p>
+            <p>
+              Expôs no Instituto Cultural Brasil Argentina, Galeria Villa Riso, Galeria Arte Universo, Galeria Marly Faro, XV Salão de Arte da Universidade Estácio de Sá, Galeria Contemporarte em Búzios, MAM-RJ e Carrousel du Louvre. Em 2005 realizou em Londres a individual "Brazilian Extravaganza", na Pangea Gallery. Suas obras integram coleções no Brasil e no exterior, incluindo comodato no acervo do MAM-RJ.
+            </p>
+            <div class="social-row">
+              <a class="text-link subtle-link" href="https://www.instagram.com/artepablomenezes/" target="_blank" rel="noreferrer">Instagram</a>
+              <a class="text-link subtle-link" href="https://pablomenezes.blogspot.com/" target="_blank" rel="noreferrer">Blog / arquivo</a>
+              <a class="text-link subtle-link" href="https://opensea.io/collection/untitled-collection-255262529" target="_blank" rel="noreferrer">OpenSea / Medusa</a>
+              <a class="text-link subtle-link" href="https://www.facebook.com/artepablomanoelmenezes/?ref=PROFILE_EDIT_xav_ig_profile_page_web#" target="_blank" rel="noreferrer">Facebook</a>
+              <a class="text-link subtle-link" href="https://youtu.be/wdz6AMJFvSk?t=410" target="_blank" rel="noreferrer">Entrevista no Louvre</a>
+            </div>
+          </div>
+          <div class="featured-frame">
+            <img src="assets/img/pablo/5.1.png" alt="Obra de Pablo Menezes em destaque" />
+          </div>
+        </div>
+      </section>
+
+      <section id="percurso" class="path section-pad">
+        <div class="section-heading align-left">
+          <p class="eyebrow">Percurso</p>
+          <h2>Trajetória, exposições e projetos.</h2>
+            <p>Espaço reservado para organizar a trajetória de Pablo Menezes: processo, pesquisa, exposições, projetos e presença no campo da arte contemporânea.</p>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>01</span>
+            <h3>Pesquisa visual</h3>
+            <p>Investigação sobre corpo, matéria, poder, subjetividade e vida social.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Obras e instalações</h3>
+            <p>Área para projetos, exposições, instalações e registros institucionais.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Genoma e acervo</h3>
+            <p>Registros da exposição Genoma, obras de parede, objetos, desenhos e séries em organização.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="espaco-virtual" class="virtual section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">Futuro tour virtual</p>
+          <h2>Espaço virtual da galeria</h2>
+          <p>Um corredor de galeria: obras à direita e à esquerda, com luz suave destacando as peças. Depois, esta área pode evoluir para tour 2D, 360° ou Three.js.</p>
+        </div>
+        <div id="virtual-wall" class="virtual-wall" aria-label="Parede virtual com obras clicáveis"></div>
+      </section>
+
+      <section id="contato" class="contact section-pad">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Vamos conversar sobre aquisição?</h2>
+          <p>A venda acontece por contato direto: disponibilidade, ficha técnica, envio e condições são combinados com a galeria.</p>
+        </div>
+        <div class="contact-panel">
+          <a class="btn primary" target="_blank" rel="noreferrer" href="https://wa.me/5522997414490?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Galeria%20Contemporarte%20e%20quero%20conversar%20sobre%20uma%20obra.">WhatsApp da galeria</a>
+          <a class="btn ghost dark" href="https://www.instagram.com/artepablomenezes/" target="_blank" rel="noreferrer">Instagram do artista</a>
+          <p>Rio de Janeiro · envio para todo o Brasil</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Galeria Contemporarte · Pablo Menezes</span>
+      <span>
+        Projeto por <a href="https://sammyfreitas.github.io/portfolio/" target="_blank" rel="noreferrer">Anthony Freitas</a>
+        <small>2026 · todos os direitos reservados · v.2.3</small>
+      </span>
+    </footer>
+
+    <dialog id="work-modal" class="work-modal">
+      <button class="modal-close" type="button" aria-label="Fechar obra">×</button>
+      <div class="modal-grid">
+        <div class="modal-frame"><img id="modal-image" src="" alt="" /></div>
+        <div class="modal-copy">
+          <p id="modal-category" class="eyebrow"></p>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+          <dl id="modal-meta"></dl>
+          <a id="modal-whatsapp" class="btn primary" target="_blank" rel="noreferrer" href="#">Tenho interesse nesta obra</a>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="assets/js/works.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
